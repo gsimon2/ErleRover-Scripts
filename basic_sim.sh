@@ -16,5 +16,5 @@ echo "param set SYSID_MYGCS 255"
 echo
 echo "(For scripted control enter:)"
 echo "param set SYSID_MYGCS 1"
-
-
+echo "RC 3 - throttle. (1100-1900), 1500 = standstill"
+echo "RC 1 - steering."
