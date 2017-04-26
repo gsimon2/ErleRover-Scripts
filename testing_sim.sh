@@ -1,11 +1,18 @@
 #!/bin/bash
-#This script starts up all other scripts required to start the basic simulation of the rover in Gazebo where the rover can take manual commands from the MAVProxy terminal
 #
-# GAS 2017-03-15
+# GAS 2017-04-13
 
 ./start_MAVProxy.sh &
-./start_gazebo_blank.sh &
-./start_FPV.sh &
+
+xterm -title "Explorer Node" -e "
+	cd ~/simulation/ros_catkin_ws;
+	source devel/setup.bash;
+	rosrun erle_rover_explorer msu_rover_explorer.py" &
+	
+xterm -title "Gazebo" -e "
+        source ~/simulation/ros_catkin_ws/devel/setup.bash;
+        roslaunch ardupilot_sitl_gazebo_plugin msu.launch" &
+        	
 echo "Scripts successfully started!"
 echo
 echo "Enter the following into MAVPropxy:"
@@ -16,5 +23,3 @@ echo "param set SYSID_MYGCS 255"
 echo
 echo "(For scripted control enter:)"
 echo "param set SYSID_MYGCS 1"
-echo "RC 3 - throttle. (1100-1900), 1500 = standstill"
-echo "RC 1 - steering."
