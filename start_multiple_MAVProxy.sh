@@ -15,6 +15,6 @@ xterm -title "MAVProxy" -hold  -e "
 	echo \" (For manual control) - param set SYSID_MYGCS 255\";
 	echo
 	echo \" (For script control) - param set SYSID_MYGCS 1\";
-	../Tools/autotest/sim_vehicle.sh -j 4 -f Gazebo --map --console"
+	../Tools/autotest/sim_vehicle.sh -j 4 -f Gazebo -I 1"
 
 
