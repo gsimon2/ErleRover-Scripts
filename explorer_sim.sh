@@ -5,7 +5,6 @@
 
 ./start_MAVProxy.sh &
 ./start_gazebo_explorer.sh &
-./start_FPV.sh &
 ./start_explorer_node.sh &
 echo "Scripts successfully started!"
 echo

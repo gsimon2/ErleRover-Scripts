@@ -16,4 +16,13 @@ Enhancements (Start after a running option):
 >"./laser_mapping.sh"
 	-Uses RViz to create a 2D map of the rangefinder outputs.
 	-Once RViz is open, hit ctrl+n and select "map/map" from the "by topic" tab
-	-Next change "Fixed Frame" from "map" to "sonar2_link"
+	-Next change "Fixed Frame" from "map" to "sonar2_link"]
+	
+>"./start_FPV.sh"
+	-This script will run a python script that is brings up a FPV for the forward facing camera that is on the rover
+	
+
+Clean up (sometimes processes tend to hang around after stopping the scripts):
+>"killall -9 gzserver gzclient xterm roscore rosmaster rosout mavproxy.py"
+
+	

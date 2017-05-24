@@ -3,7 +3,8 @@
 #
 # GAS 2017-03-15
 #
-xterm -title "FPV forward camera" -e "
-	cd ~/simulation/ardupilot/APMrover2/; 
-	python image_visual.py"
+
+cd ~/simulation/ardupilot/APMrover2/ 
+python image_visual.py
+
 

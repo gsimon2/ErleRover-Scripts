@@ -5,7 +5,6 @@
 
 ./start_MAVProxy.sh &
 ./start_gazebo_blank.sh &
-./start_FPV.sh &
 echo "Scripts successfully started!"
 echo
 echo "Enter the following into MAVPropxy:"
